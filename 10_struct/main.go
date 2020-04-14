@@ -2,29 +2,32 @@ package main
 
 import "fmt"
 
+type People struct{
+    name string
+    age int
+    country string
+    gender string
+}
+
 func main(){
-    type People struct{
-        name string
-        age int
-        country string
-        gender string
-    }
 
-    //var people People
-    //people.name = "bob"
-    //people.age = 21
-    //people.country = "America"
-    //people.gender = "m"
+    var bob People
+    bob.name = "bob"
+    bob.age = 21
+    bob.country = "America"
+    bob.gender = "m"
 
-    //people := new(People)
-    //people.name = "bob"
-    //people.age = 21
-    //people.country = "America"
-    //people.gender = "m"
+    lili := new(People)
+    lili.name = "lili"
+    lili.age = 21
+    lili.country = "America"
+    lili.gender = "f"
 
-    //people := People{name:"bob", age:21, country:"America", gender:"m"}
-    people := People{"bob", 21, "America", "m"}
+    sam := People{name:"sam", age:21, country:"America", gender:"m"}
+    jack := People{"jack", 21, "America", "m"}
 
-    fmt.Println(people)
-    fmt.Println("people.name:",people.name)
+    fmt.Println(bob)
+    fmt.Println("bob.name:", bob.name)
+    fmt.Println("sam.name:", sam.name)
+    fmt.Println("jack.name:", jack.name)
 }
